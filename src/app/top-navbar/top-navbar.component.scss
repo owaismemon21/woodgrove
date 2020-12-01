@@ -1,0 +1,18 @@
+.top-navbar {
+    padding: 15px 0;
+    .nav {
+        justify-content: center;
+        li {
+            a {
+                font: normal normal 600 16px/19px 'Montserrat', sans-serif;
+                letter-spacing: 0px;
+                color: #0E3C69;
+                border-bottom: 3px solid #FFFFFF;
+                &:hover, &:focus, &.active {
+                    color: #F86B00;
+                    border-bottom: 3px solid #F86B00;
+                }
+            }
+        }
+    }
+}

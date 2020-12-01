@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'woodgrove';
+
+  isCollapse: boolean = false ; // hidden by default
+
+  toggleNavigationPanel() {
+    this.isCollapse = ! this.isCollapse;
+    alert("2");
+  }
 }

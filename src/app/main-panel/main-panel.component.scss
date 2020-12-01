@@ -1,0 +1,16 @@
+.main-panel {
+    -ms-flex: 1;
+    flex: 1;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    display: -ms-flexbox;
+    display: flex;
+    z-index: 8;
+    padding: 50px 0 0 286px;
+    transition: all .2s;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+
+    &.leftPaneCollapse {
+        padding: 50px 0 0 68px;
+    }
+}

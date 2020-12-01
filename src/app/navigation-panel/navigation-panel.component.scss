@@ -1,0 +1,191 @@
+.nav-panel {
+    width: 286px;
+    left: 0;
+    top: 51px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 17px #ADB3C480;
+    display: -ms-flexbox;
+    display: block;
+    z-index: 20;
+    overflow: auto;
+    position: fixed;
+    height: 92.2vh;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    transition: all .3s ease;
+
+    .navbar-nav {
+        display: block;
+        padding-top: 10px;
+
+        li {
+            display: block;
+            padding: 5px 0;
+
+            a {
+                display: block;
+                text-align: left;
+                font: normal normal medium 14px/40px 'Montserrat', sans-serif;
+                letter-spacing: 0px;
+                color: #0E3C69;
+                padding: 0 20px;
+                font-size: 0.95rem;
+
+                &:hover, &:focus, &.active {
+                    color: #F86B00;
+                    .icon {
+                        &.dashboard-icon {background-image: url('/../../assets/images/dashboard-panel-hover.svg');}
+                        &.laptop-icon {background-image: url('/../../assets/images/laptop-code-solid-hover.svg');}
+                        &.avatar-icon {background-image: url('/../../assets/images/avatar-hover.svg');}
+                        &.bank-icon {background-image: url('/../../assets/images/glyph-hover.svg');}
+                        &.user-icon {background-image: url('/../../assets/images/user-hover.svg');}
+                        &.report-icon {background-image: url('/../../assets/images/newspaper-hover.svg');}
+                        &.shield-icon {background-image: url('/../../assets/images/shield-hover.svg');}
+                    }
+                    p {
+                        color: #F86B00;
+                    }
+                }
+
+                &:after {
+                    float: right;
+                    margin-top: 11px;
+                }
+
+                .icon {
+                    width: 22px;
+                    height: 20px;
+                    display: inline-block;
+                    background-repeat: no-repeat;
+                    background-position: center center;
+                    vertical-align: sub;
+
+                    &.dashboard-icon {background-image: url('/../../assets/images/dashboard-panel.svg');}
+                    &.laptop-icon {background-image: url('/../../assets/images/laptop-code-solid.svg');}
+                    &.avatar-icon {background-image: url('/../../assets/images/avatar.svg');}
+                    &.bank-icon {background-image: url('/../../assets/images/glyph.svg');}
+                    &.user-icon {background-image: url('/../../assets/images/user.svg');}
+                    &.report-icon {background-image: url('/../../assets/images/newspaper.svg');}
+                    &.shield-icon {background-image: url('/../../assets/images/shield.svg');}
+                }
+                
+                p {
+                    display: inline-block;
+                    padding: 0 0 0 5px;
+                    margin: 0;
+                }
+
+                // .caret {
+                //     width: 7px;
+                //     height: 7px;
+                //     text-align: right;
+                // }
+                // &:before {
+                //     top: 347px;
+                //     left: 254px;
+                //     width: 7px;
+                //     height: 7px;
+                //     transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+                //     background: #5B697D 0% 0% no-repeat padding-box;
+                //     box-shadow: 0px 3px 15px #0000001F;
+                //     border-radius: 30px;
+                // }
+                // &:after {
+                //     top: 347px;
+                //     left: 258px;
+                //     width: 7px;
+                //     height: 7px;
+                //     transform: matrix(0.71, -0.71, 0.71, 0.71, 0, 0);
+                //     background: #5B697D 0% 0% no-repeat padding-box;
+                //     box-shadow: 0px 3px 15px #0000001F;
+                //     border-radius: 30px;
+                // }
+            }
+            &.show {
+                &:hover, &:focus, &.active {
+                    color: #F86B00;
+                }
+            }
+            .dropdown-menu {
+                position: static !important;
+                transform: none !important;
+                border: none;
+                padding: 0;
+                margin: 0;
+
+                li {
+                    display: block;
+                    a {
+                        font: normal normal normal 14px/40px 'Montserrat', sans-serif;
+                        padding: 0 47px;
+                        background: none;
+                        line-height: normal;
+                        font-size: 0.83rem;
+                    }
+                }
+            }
+        }
+    }
+
+    &.leftPaneCollapse {
+        width: 68px;
+        overflow: visible;
+
+        .navbar-nav {
+            li {
+                a {
+                    .caret, p, &:after {display: none;}
+                }
+                .dropdown-menu {
+                    position: absolute !important;
+                    left: 100% !important;
+                    top: 0px !important;
+                    //transform: none !important;
+                    border: none;
+                    padding: 10px 0;
+                    margin: 0 0 0 10px;
+                    width: 250px;
+                    //height: 80vh;
+                    background: #FFFFFF 0% 0% no-repeat padding-box;
+                    box-shadow: 0px 3px 17px #ADB3C480;
+                    //overflow: auto;
+
+                    &:before {
+                        // content: "";
+                        // width: 16px;
+                        // height: 25px;
+                        //transform: matrix(0, -1, 1, 0, 0, 0);
+                        //background: #FFFFFF 0% 0% no-repeat padding-box;
+
+                        content:"\A";
+                        border-style: solid;
+                        border-width: 5px 10px 5px 0;
+                        border-color: transparent #FFFFFF transparent transparent;
+                        box-shadow: 0px 3px 17px #ADB3C480;
+                        position: absolute;
+                        left: -10px;
+                    }
+
+                    li {
+                        display: block;
+                        a {
+                            font: normal normal normal 14px/40px 'Montserrat', sans-serif;
+                            padding: 0 20px;
+                            background: none;
+                            line-height: normal;
+                            font-size: 0.83rem;
+                        }
+                    }
+                }
+                &:nth-child(2) {
+                    .dropdown-menu {
+                        top: -30px !important;
+                        &:before {
+                            top: 40px !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
