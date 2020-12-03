@@ -7,14 +7,10 @@ import { Router, ActivatedRoute, ParamMap } from '@angular/router';
   styleUrls: ['./customer.component.scss']
 })
 export class CustomerComponent implements OnInit {
-  isCollapse: boolean = false ; // hidden by default
-  toggleNavigationPanel() {
-    this.isCollapse = ! this.isCollapse;
-    alert("1");
+  
+  constructor(private route: ActivatedRoute, private router: Router) {
+
   }
-  constructor(
-    private route: ActivatedRoute,
-  ) { }
 
   ngOnInit(): void {
   }

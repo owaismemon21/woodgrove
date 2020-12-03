@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core'; 
 
 @Component({
   selector: 'app-header',
@@ -7,15 +7,21 @@ import { Component, OnInit } from '@angular/core';
 })
 
 export class HeaderComponent implements OnInit {
-  isCollapse: boolean = false ; // hidden by default
-  toggleNavigationPanel() {
-    this.isCollapse = ! this.isCollapse;
-    alert("1");
-  }
   
   constructor() { }
-
+  
+  @Input() isCollapse?: boolean;
+  
+  @Output() isCollapseChange = new EventEmitter(); 
+  
+  
   ngOnInit(): void {
+  }
+
+  
+  toggleNavigationPanel() {
+    this.isCollapse = ! this.isCollapse;
+    this.isCollapseChange.emit(this.isCollapse); 
   }
 
 }

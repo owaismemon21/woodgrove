@@ -1,16 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 .infoboxs {
-    display: flex;
-    padding: 15px 0;
+    padding: 0;
     .card {
         width: 100%;
+        min-width: 200px;
         display: inline-flex;
         flex-direction: column;
         background: #FFFFFF 0% 0% no-repeat padding-box;
         box-shadow: 0px 0px 20px #E2E3EA;
         border-radius: 8px;
-        margin: 0 15px;
+        margin: 15px 0;
         font-family: 'Montserrat', sans-serif;
+        
         &.newCustomer{
             border: 1px solid #F86B00;
         }
@@ -47,6 +48,7 @@
                     font: normal normal normal 13px/16px 'Montserrat', sans-serif;
                     letter-spacing: 0px;
                     color: #606989;
+                    padding: 0;
                 }
             }
             span {
@@ -55,6 +57,7 @@
                 font: normal normal 600 16px/19px 'Montserrat', sans-serif;
                 letter-spacing: 0px;
                 color: #000000;
+                padding: 5px 0 0 0;
             }
         }
         

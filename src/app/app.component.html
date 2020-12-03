@@ -1,3 +1,3 @@
-<app-header></app-header>
-<app-navigation-panel></app-navigation-panel>
-<app-main-panel></app-main-panel>
+<app-header [isCollapse]=isCollapse (isCollapseChange)=toggleNavigationPanel()></app-header>
+<app-navigation-panel [isCollapse]=isCollapse (isCollapseChange)=toggleNavigationPanel()></app-navigation-panel>
+<app-main-panel [isCollapse]=isCollapse (isCollapseChange)=toggleNavigationPanel()></app-main-panel>

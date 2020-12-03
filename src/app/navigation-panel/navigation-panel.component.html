@@ -1,4 +1,8 @@
-<div class="nav-panel" [ngClass]="isCollapse ? 'leftPaneCollapse' : ''">
+<div class="nav-panel" [ngClass]="{'leftPaneCollapse': isCollapse}">
+    <div class="searchbox">
+      <input type="text" placeholder="" />
+      <button><i class="search-icon"></i></button>
+    </div>
     <ul class="navbar-nav">
         <li class="nav-item"> <a class="nav-link active" href="#"><i class="icon dashboard-icon"></i> <p>Dashboard</p></a></li>
         <li class="nav-item dropdown"> 

@@ -8,9 +8,9 @@ import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 })
 export class DashboardComponent implements OnInit {
   
-  constructor(
-    private route: ActivatedRoute,
-  ) { }
+  constructor(private route: ActivatedRoute, private router: Router) {
+
+  }
 
   ngOnInit(): void {
   }

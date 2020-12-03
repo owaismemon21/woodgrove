@@ -9,10 +9,41 @@
     z-index: 20;
     overflow: auto;
     position: fixed;
-    height: 92.2vh;
+    height: 95vh;
     -ms-flex-direction: column;
     flex-direction: column;
     transition: all .3s ease;
+
+    .searchbox {
+        position: relative;
+        margin: 13px 20px;
+        input {
+            width: 100%;
+            height: 42px;
+            background: #FFFFFF 0% 0% no-repeat padding-box;
+            border: 1px solid #ADB3C4;
+            border-radius: 4px;
+            padding:5px 10px 5px 37px;
+            outline: none;
+        }
+        button {
+            border: none;
+            box-shadow: none;
+            outline: none;
+            background: none;
+            padding: 0;
+            margin: 0;
+            position: absolute;
+            left: 11px;
+            top: 13px;
+            .search-icon {
+                width: 16px;
+                height: 16px;
+                display: block;
+                background: transparent url('/../../assets/images/magnifiying-glass.svg') 0% 0% no-repeat padding-box;
+            }
+        }
+    }
 
     .navbar-nav {
         display: block;
@@ -20,7 +51,7 @@
 
         li {
             display: block;
-            padding: 5px 0;
+            padding: 10px 0;
 
             a {
                 display: block;
@@ -74,32 +105,6 @@
                     padding: 0 0 0 5px;
                     margin: 0;
                 }
-
-                // .caret {
-                //     width: 7px;
-                //     height: 7px;
-                //     text-align: right;
-                // }
-                // &:before {
-                //     top: 347px;
-                //     left: 254px;
-                //     width: 7px;
-                //     height: 7px;
-                //     transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
-                //     background: #5B697D 0% 0% no-repeat padding-box;
-                //     box-shadow: 0px 3px 15px #0000001F;
-                //     border-radius: 30px;
-                // }
-                // &:after {
-                //     top: 347px;
-                //     left: 258px;
-                //     width: 7px;
-                //     height: 7px;
-                //     transform: matrix(0.71, -0.71, 0.71, 0.71, 0, 0);
-                //     background: #5B697D 0% 0% no-repeat padding-box;
-                //     box-shadow: 0px 3px 15px #0000001F;
-                //     border-radius: 30px;
-                // }
             }
             &.show {
                 &:hover, &:focus, &.active {
@@ -115,6 +120,7 @@
 
                 li {
                     display: block;
+                    padding: 5px 0;
                     a {
                         font: normal normal normal 14px/40px 'Montserrat', sans-serif;
                         padding: 0 47px;
@@ -131,10 +137,51 @@
         width: 68px;
         overflow: visible;
 
+        .searchbox {
+            margin: 13px 11px;
+            button {
+                display: none;
+            }
+            input {
+                background:transparent;
+                border: none;
+                border-bottom: 1px solid #ADB3C4;
+                border-radius: 0px;
+                padding:5px;
+                outline: none;
+                position: relative;
+                z-index: 1;
+                
+                &:focus+button {
+                    display: none;
+                    outline: none;
+                    border: none;
+                    border-bottom: 1px solid #ADB3C4;
+
+                    &:not(:placeholder-shown) {
+                        background: transparent;
+                        background-image: none;
+                    }
+                }
+                &:not(:placeholder-shown) {
+                    background: transparent url('/../../assets/images/magnifiying-glass.svg') center center no-repeat padding-box;
+                }
+            }
+            
+        }
+
         .navbar-nav {
             li {
+                padding: 10px 0;
                 a {
                     .caret, p, &:after {display: none;}
+                }
+                &.dropdown:hover>.dropdown-menu {
+                    display: block;
+                }
+                &.dropdown>.dropdown-toggle:active {
+                    /*Without this, clicking will make it sticky*/
+                    pointer-events: none;
                 }
                 .dropdown-menu {
                     position: absolute !important;
@@ -151,12 +198,6 @@
                     //overflow: auto;
 
                     &:before {
-                        // content: "";
-                        // width: 16px;
-                        // height: 25px;
-                        //transform: matrix(0, -1, 1, 0, 0, 0);
-                        //background: #FFFFFF 0% 0% no-repeat padding-box;
-
                         content:"\A";
                         border-style: solid;
                         border-width: 5px 10px 5px 0;
@@ -164,10 +205,12 @@
                         box-shadow: 0px 3px 17px #ADB3C480;
                         position: absolute;
                         left: -10px;
+                        top: 18px;
                     }
 
                     li {
                         display: block;
+                        padding: 5px 0;
                         a {
                             font: normal normal normal 14px/40px 'Montserrat', sans-serif;
                             padding: 0 20px;
@@ -181,7 +224,7 @@
                     .dropdown-menu {
                         top: -30px !important;
                         &:before {
-                            top: 40px !important;
+                            top: 48px !important;
                         }
                     }
                 }

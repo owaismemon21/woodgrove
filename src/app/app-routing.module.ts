@@ -5,9 +5,9 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { CustomerComponent } from './customer/customer.component';
 
 const routes: Routes = [
-  { path: '', component: DashboardComponent },
+  { path: '',   redirectTo: '/dashboard', pathMatch: 'full' }, // redirect to `first-component`
+  { path: 'dashboard', pathMatch: 'full', component: DashboardComponent },
   { path: 'customer', component: CustomerComponent },
-  { path: '',   redirectTo: '/', pathMatch: 'full' }, // redirect to `first-component`
   //{ path: '**', component: PageNotFoundComponent },  // Wildcard route for a 404 page
   
    // pathMatch: 'full',

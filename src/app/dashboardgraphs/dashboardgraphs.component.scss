@@ -1,7 +1,7 @@
 .graphBox {
     padding: 0;
     .graph-box {
-        min-height: 205px;
+        min-width: 200px;
         background: #FFFFFF 0% 0% no-repeat padding-box;
         box-shadow: 0px 0px 20px #E2E3EA;
         border: 1px solid #D8D8D8;
@@ -13,6 +13,10 @@
             font: normal normal 600 16px/19px 'Montserrat', sans-serif;
             letter-spacing: 0px;
             color: #000000;
+        }
+
+        img {
+            width: 100%;
         }
     }
 }

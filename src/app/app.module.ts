@@ -32,7 +32,7 @@ import { CustomerinfoComponent } from './customerinfo/customerinfo.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgxPopper
+    NgxPopper,
   ],
   providers: [],
   bootstrap: [AppComponent]
